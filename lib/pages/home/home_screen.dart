@@ -16,11 +16,14 @@ class HomeScreen extends StatelessWidget {
         // leading: null,
         automaticallyImplyLeading: false,
 
-        title: const Text("CSC 443",
-            style: TextStyle(
-                color: Colors.white,
-                fontSize: 25,
-                fontWeight: FontWeight.w800)),
+        title: const Center(
+          child: Text("CSC 443",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 25,
+                  fontWeight: FontWeight.w800)),
+        ),
         backgroundColor: Colors.black,
         elevation: 2,
       ),
@@ -80,16 +83,16 @@ class HomeScreen extends StatelessWidget {
                     )
                   ],
                 )),
-            TextButton(
-                style: TextButton.styleFrom(
-                    foregroundColor: Colors.white,
-                    backgroundColor: Colors.black),
-                onPressed: () {
-                  Navigator.pushNamed(context, "scan_result_screen",
-                      arguments: ScanResultScreenArgs(
-                          barcodeResult: "This is a barcode text"));
-                },
-                child: const Text("scan result screen")),
+            // TextButton(
+            //     style: TextButton.styleFrom(
+            //         foregroundColor: Colors.white,
+            //         backgroundColor: Colors.black),
+            //     onPressed: () {
+            //       Navigator.pushNamed(context, "scan_result_screen",
+            //           arguments: ScanResultScreenArgs(
+            //               barcodeResult: "This is a barcode text"));
+            //     },
+            //     child: const Text("scan result screen")),
             const Spacer(),
           ],
         ),
@@ -98,7 +101,7 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-const String text_ = """ 
+const String text_ = """
     QR codes were designed to store information in a two-dimensional barcode that could be quickly scanned and decoded. Unlike traditional barcodes that store data horizontally, QR codes store data both vertically and horizontally, allowing them to store significantly more information.
 
     They consist of black squares arranged on a white background, forming a square grid. The arrangement of these squares encodes the data stored in the QR code

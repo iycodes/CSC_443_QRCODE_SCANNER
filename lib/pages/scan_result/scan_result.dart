@@ -10,7 +10,13 @@ class ScanResultScreen extends StatelessWidget {
     final deviceWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Scan Result"),
+        foregroundColor: Colors.white,
+        title: const Center(
+          child: Text(
+            "Scan Result",
+            style: TextStyle(color: Colors.white, fontWeight: FontWeight.w800),
+          ),
+        ),
         backgroundColor: Colors.black,
       ),
       body: SafeArea(

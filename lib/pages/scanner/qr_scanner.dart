@@ -50,7 +50,13 @@ class _BarcodeScannerWithControllerState
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('SCAN QRCODE'),
+        foregroundColor: Colors.white,
+        title: const Center(
+          child: Text(
+            'SCAN QRCODE',
+            style: TextStyle(color: Colors.white),
+          ),
+        ),
         backgroundColor: Colors.black,
       ),
       backgroundColor: Colors.black,
